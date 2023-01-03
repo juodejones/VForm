@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "72441042418",
+    "firebase_url": "https://vform-8ab77-default-rtdb.firebaseio.com",
+    "project_id": "vform-8ab77",
+    "storage_bucket": "vform-8ab77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72441042418:android:d9f443c2f747f19522076b",
+        "android_client_info": {
+          "package_name": "com.jones.vform"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72441042418-fd9jr7d9iogcv57f8offjsa5skonks6c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jones.vform",
+            "certificate_hash": "2ff241b8e4799f0358194602bf96852b244d4323"
+          }
+        },
+        {
+          "client_id": "72441042418-ruakq2kkt08pnd8ndafmqha9jvjlggpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4JNsuhd4_pkz6bU2tiMR-SpPg04s7Ihw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72441042418-ruakq2kkt08pnd8ndafmqha9jvjlggpp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

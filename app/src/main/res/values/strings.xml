@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">VForm</string>
+    <string name="list_form_name">Form name : %s</string>
+    <string name="date_created">Date created : %d-%d-%d</string>
+    <string name="expiry_date">Expiry date : %d-%d-%d</string>
+    <string name="sent_to">Sent to :  %s</string>
+    <string name="creating_a_form"><b>Creating a Form</b></string>
+    <string name="create_form">Create Form</string>
+    <string name="add">Add</string>
+    <string name="field_label">Field Label</string>
+    <string name="enter_form_name">Enter Form Name</string>
+    <string name="spinner_item">Spinner Item</string>
+    <string name="spinner_item_hint">Enter spinner items separated by \' , \'</string>
+    <string name="submit">Submit</string>
+    <string name="enter_username">Enter username</string>
+    <string name="form_name"><b>Form Name: </b></string>
+</resources>
