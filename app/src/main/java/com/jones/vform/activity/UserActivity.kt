@@ -1,5 +1,6 @@
 package com.jones.vform.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.MutableLiveData
@@ -15,20 +16,21 @@ class UserActivity : AppCompatActivity(), UserListRecyclerViewAdapter.UserCardCl
     private lateinit var binding: ActivityUserBinding
     private lateinit var recyclerViewAdapter: UserListRecyclerViewAdapter
     private var users: MutableLiveData<List<String?>> = MutableLiveData()
+    private var formName: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val formName = intent.getStringExtra("FormName")
+        formName = intent.getStringExtra("FormName")!!
 
         users.observe(this) {
             recyclerViewAdapter = UserListRecyclerViewAdapter(it, this)
             binding.userListRv.adapter = recyclerViewAdapter
         }
 
-        AppController.instance.dataDB?.child(formName!!)
+        AppController.instance.dataDB?.child(formName)
             ?.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()) {
@@ -47,10 +49,13 @@ class UserActivity : AppCompatActivity(), UserListRecyclerViewAdapter.UserCardCl
     }
 
     override fun onItemClick(userId: String?) {
-        TODO("Not yet implemented")
+        val intent = Intent(this, ViewForm::class.java)
+        intent.putExtra("formname", formName)
+        intent.putExtra("userid", userId)
+        startActivity(intent)
     }
 
     override fun onDeleteClick(userId: String?) {
-        TODO("Not yet implemented")
+        AppController.instance.dataDB?.child("$formName/$userId")?.removeValue()
     }
 }

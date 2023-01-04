@@ -43,7 +43,6 @@
                 android:src="@drawable/ic_baseline_delete_24"
                 android:background="#00FFFFFF"
                 android:layout_alignParentEnd="true"
-                android:visibility="gone"
                 />
 
         </RelativeLayout>
